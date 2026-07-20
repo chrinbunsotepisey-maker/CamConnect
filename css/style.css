@@ -1,0 +1,78 @@
+body {
+  background-color: #060918;
+  color: #F5F7FF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* view all competiton style */
+.section-link {
+  color: #5094FA !important;
+  transition: 0.2s;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+  color: #0368FF !important;
+}
+
+.section-link:active {
+  opacity: 0.7;
+}
+
+/* font for the competition's date in each card */
+.event-date {
+  font-family: 'Outfit', sans-serif;
+}
+
+.event-card {
+  background-color: #0D1425;
+  border: 2px solid #3C85F2;
+  --bs-border-radius: 1rem;
+  overflow: hidden;
+}
+
+.event-card-footer {
+  background-color: #172C4A;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: -1.5rem;
+}
+
+.event-card {
+  background-color: #0D1425;
+  border: 1px solid #3C85F2;
+}
+
+.badge {
+  padding: 0.5em 1em;
+}
+
+.btn {
+  padding: 0.5rem 1.25rem;
+}
+
+.event-card {
+  background-color: #0D1425;
+  border: 2px solid #3C85F2;
+  --bs-border-radius: 1rem;
+}
+
+.pill-sm {
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.badge.pill-sm {
+  border: 1px solid transparent;
+}
+
+.step-card {
+  background-color: #101B31;
+  border: 2px solid #1E2D45;
+}
+
+
