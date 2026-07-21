@@ -1,0 +1,199 @@
+.competition-page{
+    background:#070c1d;
+    min-height:100vh;
+}
+
+.competition-title{
+    color:white;
+    font-weight:700;
+    font-size:2.5rem;
+}
+
+.competition-title span{
+    color:#3b82f6;
+}
+
+.filter-text{
+    color:#cfcfcf;
+    margin-top:8px;
+}
+
+.filter-card{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:15px;
+
+    padding:30px;
+
+}
+
+.filter-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-bottom:22px;
+
+    flex-wrap:wrap;
+
+}
+
+.filter-title{
+
+    width:120px;
+
+    color:#8ea4c9;
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+.filter-options{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:22px;
+
+}
+
+.filter-options label{
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+}
+
+.search-box{
+
+    position:relative;
+
+}
+
+.search-box i{
+
+    position:absolute;
+
+    left:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#888;
+
+}
+
+.search-box input{
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:white;
+
+    padding-left:45px;
+
+    height:48px;
+
+    border-radius:10px;
+
+}
+
+.search-box input:focus{
+
+    background:#111827;
+
+    color:white;
+
+    box-shadow:none;
+
+    border-color:#3b82f6;
+
+}
+
+.form-select{
+
+    width:240px;
+
+    background:#111827;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.1);
+
+}
+
+.form-select:focus{
+
+    box-shadow:none;
+
+    border-color:#3b82f6;
+
+}
+
+@media (max-width:991px){
+
+.filter-row{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.filter-title{
+
+    width:auto;
+
+}
+
+.form-select{
+
+    width:100%;
+
+}
+
+.search-box{
+
+    margin-top:20px;
+
+}
+
+}
+
+@media (max-width:576px){
+
+.competition-title{
+
+    font-size:2rem;
+
+}
+
+.filter-card{
+
+    padding:20px;
+
+}
+
+.filter-options{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+}

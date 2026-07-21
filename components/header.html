@@ -1,57 +1,59 @@
 <header>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-3" >
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3 sticky-top">
+    <div class="container">
+      <!-- Website Logo -->
+      <a class="navbar-brand fw-bold fs-3" href="index.html">
+        Cam<span class="text-primary">Connect</span>
+      </a>
 
-        <div class="container">
+      <!-- Mobile Toggle Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- Website Logo -->
-            <a class="navbar-brand fw-bold fs-3" href="index.html">
-                Cam<span class="text-primary">Connect</span>
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarMenu">
+        <ul class="navbar-nav ms-auto text-center text-lg-start">
+          <li class="nav-item ms-3">
+            <a
+              class="nav-link fw-semibold"
+              href="index.html"
+              data-page="index.html"
+            >
+              Home
             </a>
+          </li>
 
-            <!-- Mobile Toggle Button -->
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu"
-                aria-controls="navbarMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+          <li class="nav-item ms-3">
+            <a
+              class="nav-link fw-semibold"
+              href="competition.html"
+              data-page="competition.html"
+            >
+              Competitions
+            </a>
+          </li>
 
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-            <!-- Navigation Links -->
-            <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarMenu">
-
-                <ul class="navbar-nav ms-auto text-center text-lg-start">
-
-                    <li class="nav-item ms-3">
-                        <a class="nav-link active fw-semibold" href="index.html">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-item ms-3">
-                        <a class="nav-link fw-semibold" href="competitions.html">
-                            Competitions
-                        </a>
-                    </li>
-
-                    <li class="nav-item ms-3">
-                        <a class="nav-link fw-semibold" href="about.html">
-                            About
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </nav>
-
+          <li class="nav-item ms-3">
+            <a
+              class="nav-link fw-semibold"
+              href="about.html"
+              data-page="about.html"
+            >
+              About
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
