@@ -33,12 +33,25 @@
   border: 1px solid #1E2D45;
 }
 
-/* makes the hero image fill its container, cropped */
+/* makes the hero image fill its container. On tablet/desktop (see the
+   min-width:576px query below) it's letterboxed (object-fit: contain)
+   so the full poster always shows instead of being cropped. */
 .detail-hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* tablet & up: show the full image, letterboxed on the container's dark
+   background when its aspect ratio doesn't match the box (instead of
+   cropping it). Mobile is handled separately below and stays uncropped
+   at its natural size. */
+@media (min-width: 576px) {
+  .detail-hero img {
+    object-fit: contain;
+    background: #0D1425;
+  }
 }
 
 /* dark gradient over hero image for text readability */
@@ -269,10 +282,15 @@
   }
 }
 
-/* mobile: shrink hero image and card padding further */
+/* mobile: no fixed height — image shows at its natural size, uncropped */
 @media (max-width: 575.98px) {
   .detail-hero {
-    height: 200px;
+    height: auto;
+  }
+
+  .detail-hero img {
+    height: auto;
+    object-fit: initial;
   }
 
   .detail-about-card,

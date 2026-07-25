@@ -33,7 +33,8 @@ const competitions = [
     status: "Closed",
     image: "assets/images/image_3.jpg",
     registerLink: "https://...",
-    featured: true
+    featured: true,
+    organizer: "Khmer Enterprise (KE)"
   },
   {
     id: 4,
@@ -45,7 +46,8 @@ const competitions = [
     status: "Closed",
     image: "assets/images/image_4.jpg",
     registerLink: "https://...",
-    featured: true
+    featured: true,
+    organizer: "Tech for Kids Academy"
   },
   {
     id: 5,
@@ -93,7 +95,8 @@ const competitions = [
     status: "Closed",
     image: "assets/images/image_8.jpg",
     registerLink: "https://...",
-    featured: false
+    featured: false,
+    organizer: "Khmer Enterprise (KE)"
   },
   {
     id: 9,
@@ -105,7 +108,9 @@ const competitions = [
     status: "Open",
     image: "assets/images/image_9.jpg",
     registerLink: "https://...",
-    featured: true
+    featured: true,
+    organizer: "Asian Development Bank (ADB) / High-Level Technology Fund",
+    location: "India"
   },
   {
     id: 10,
@@ -117,67 +122,81 @@ const competitions = [
     status: "Closed",
     image: "assets/images/image_10.jpg",
     registerLink: "https://...",
-    featured: true
+    featured: true,
+    location: "Siem Reap"
   },
   {
     id: 11,
     name: "FrancoTech Innovation Competition 2026",
-    description: "An international competition organized by Cambodia's Ministry of Post and Telecommunications, held alongside the 20th Francophonie Summit in Phnom Penh, recognizing breakthrough digital innovations across Francophone nations. Categories include Best Digital Innovation and Best Women Technopreneurs, open to startups, innovators, entrepreneurs, and digital solution providers from Francophone countries.",
+    description: "An international competition organized by Cambodia's Ministry of Post and Telecommunications, held alongside the 20th Francophonie Summit in Phnom Penh, recognizing breakthrough digital innovations across Francophone nations.",
+    about: "Held under the theme 'Digital Innovation Across Francophone Nations,' this competition is Cambodia's contribution to hosting the 20th Francophonie Summit, welcoming the 90 member states and governments of the International Organization of La Francophonie (OIF). It's co-organized by MPTC and the Ministry of Women's Affairs, supported by the CBRD Fund, and run in partnership with Metfone. Two award tracks — Best Digital Innovation and Best Women Technopreneurs — are open to startups, innovators, and digital solution providers across the Francophone ecosystem. Each track awards three teams (Gold/Silver/Bronze, valued at $3,000/$2,000/$1,000 with trophies), and every winning team also receives $2,000 in financial support to attend the Final Judging and Award Ceremony in Phnom Penh. Timeline: applications opened July 9, 2026, close September 1, semi-final judging runs online September 16, and the Final Judging & Award Ceremony takes place November 15 at Koh Pich Convention Center.",
     category: "Tech",
     level: "Any Level",
     deadline: "2026-09-01",
     status: "Open",
     image: "assets/images/image_11.jpg",
     registerLink: "https://competition.francotech.gov.kh",
-    featured: true
+    featured: true,
+    organizer: "Ministry of Post and Telecommunications (MPTC), with Ministry of Women's Affairs",
+    location: "Koh Pich Convention Center, Phnom Penh"
   },
   {
     id: 12,
     name: "Digital and Green Innovation - Youth Cohort (DGIy)",
-    description: "A youth innovation program under the EU/GIZ-backed Digital and Green Innovation Action,delivered in Cambodia by D4D Hub and DICHI Academy. Teams tackle real Cambodian environmental challenges across three tracks - Urban Planning & Sustainable Cities, Waste/Pollution & Public Health, and Food Security & Sustainable Agriculture - building digital solutions with no coding required. Includes 10 masterclass sessions, hands-on idea to working app mentorship, and a regional trip to Southeast Asia.",
+    description: "A youth innovation program under the EU/GIZ-backed Digital and Green Innovation Action, delivered in Cambodia by D4D Hub and DICHI Academy, where teams build digital solutions to real Cambodian environmental challenges.",
+    about: "Teams work across three tracks — Urban Planning & Sustainable Cities, Waste/Pollution & Public Health, and Food Security & Sustainable Agriculture — building digital solutions with no coding required. The program includes 10 masterclass sessions, hands-on mentorship taking ideas to working apps, and a regional trip to Southeast Asia for participating teams. It sits under the broader Digital and Green Innovation (DGI) Action, a Team Europe initiative co-funded by the EU, Germany's BMZ, and other European partners, active across Sub-Saharan Africa, Latin America and the Caribbean, and Asia-Pacific.",
     category: "Tech",
     level: "University",
     deadline: "2026-07-25",
     status: "Closed",
     image: "assets/images/image_12.jpg",
     registerLink: "https://...",
-    featured: false
+    featured: false,
+    organizer: "D4D Hub and DICHI Academy"
   },
   {
     id: 13,
     name: "Cybersecurity Short Video Competition 2026",
-    description: "A short video competition by the Ministry of Post and Telecommunications (MPTC) inviting students to create 30-60 second educational videos raising awareness on cybersecurity topics (e.g. social engineering, phishing, AI, cyberbullying, IoT). The top video will represent Cambodia at the ASEAN-Japan Cybersecurity Video Competition 2026.",
+    description: "A short video competition by the Ministry of Post and Telecommunications (MPTC) inviting students to create 30-60 second educational videos raising awareness on cybersecurity topics.",
+    about: "Open to students from lower-secondary school up, under 30 years old, with Khmer nationality. Entries must be 30-60 seconds, original work, publicly posted on both Facebook and TikTok, and include subtitles in the opposite language from the one spoken (Khmer videos need English subtitles and vice versa). Participants pick a topic from a set list — including social engineering scams, money mule fraud, AI, cyberbullying, QR code phishing, cyber safety for seniors, IoT, and smart devices — or another cybersecurity-related theme. Judging is 50% message clarity, 25% creativity, 25% technical quality. Three winners receive cash prizes (2,000,000 / 1,000,000 / 600,000 riel), and the top video will represent Cambodia at the ASEAN-Japan Cybersecurity Video Competition 2026. Results announced August 10, 2026.",
     category: "Tech",
     level: "Any Level",
     deadline: "2026-07-17",
     status: "Closed",
     image: "assets/images/image_13.jpg",
     registerLink: "https://...",
-    featured: false
+    featured: false,
+    organizer: "Ministry of Post and Telecommunications (MPTC)",
+    teamSize: "Individual"
   },
   {
     id: 14,
     name: "DYNAMIC Agripreneur Bootcamp 2026",
-    description: "A bootcamp under the KOICA-funded DYNAMIC initiative (Developing Youth and Nurturing Agripreneurship for Market Impact and Community Growth), for youth in Battambang province who are outside the formal education system. Helps participants explore agricultural start-up opportunities and develop viable business ideas through hands-on, practice-focused sessions from July 30 to August 2, 2026.",
+    description: "A bootcamp under the KOICA-funded DYNAMIC initiative, for youth in Battambang province who are outside the formal education system, helping them explore agricultural start-up opportunities.",
+    about: "This Battambang track is run by Wonders, ChorogUsan for Children, and Phum Impact, funded by KOICA. It's part of the broader DYNAMIC project (Developing Youth and Nurturing Agripreneurship for Market Impact and Community Growth), a $2.45 million KOICA-funded initiative jointly implemented nationally by ChildFund Korea, Wonders International, the National Incubation Center of Cambodia, and the Royal University of Agriculture — which also runs related tracks like the DYNAMIC Agribusiness Builder program for university agriculture students. Participants develop viable business ideas through hands-on, practice-focused sessions running July 30 to August 2, 2026, in Battambang city.",
     category: "Business",
     level: "Out-of-School Youth",
     deadline: "2026-07-25",
     status: "Closed",
     image: "assets/images/image_14.jpg",
     registerLink: "https://...",
-    featured: false
+    featured: false,
+    organizer: "Wonders, ChorogUsan for Children, and Phum Impact (funded by KOICA)",
+    location: "Battambang"
   },
   {
     id: 15,
     name: "GCIP Cambodia Advanced Accelerator Program - Cohort 2",
-    description: "A UNIDO/GEF-backed advanced-stage accelerator for cleantech startups and SMEs in Cambodia, run by Techo Startup Center. Provides seed funding, a dedicated lead Entrepreneur-in-Residence (EIR), and a cross-border network to help ventures scale their cleantech solutions into global markets.",
+    description: "A UNIDO/GEF-backed advanced-stage accelerator for cleantech startups and SMEs in Cambodia, run by Techo Startup Center.",
+    about: "This is the advanced-stage phase of the Global Cleantech Innovation Programme (GCIP), a UNIDO initiative funded by the Global Environment Facility (GEF) that runs in 15+ countries worldwide with a total program budget over $27 million. In Cambodia, GCIP focuses on sectors including agriculture, hospitality, and manufacturing — with cleantech applications like renewable energy, energy efficiency, circular economy, green building, and green logistics. Support includes seed funding, a dedicated lead Entrepreneur-in-Residence (EIR), and a cross-border network to help ventures scale into global markets. Previous GCIP Cambodia cohorts have distributed grants totaling $50,000 across top finalist teams.",
     category: "Business",
     level: "Any Level",
     deadline: "2026-08-23",
     status: "Open",
     image: "assets/images/image_15.jpg",
     registerLink: "https://...",
-    featured: true
+    featured: true,
+    organizer: "Techo Startup Center (UNIDO / GEF-backed)"
   },
   {
     id: 16,
@@ -189,30 +208,36 @@ const competitions = [
     status: "Open",
     image: "assets/images/image_16.jpg",
     registerLink: "https://...",
-    featured: true
+    featured: true,
+    organizer: "Climate & Clean Air Coalition, with Cambodia's Ministry of Environment",
+    location: "Phnom Penh, Siem Reap, Kampong Chhnang, and Koh Sralao Island (Koh Kong) — pilot locations"
   },
   {
     id: 17,
     name: "Innovate Cambodia Accelerator Program – Batch 3",
-    description: "The third batch of Plug and Play Cambodia's accelerator program, run in partnership with the Ministry of Post and Telecommunications and the AUPP Technology Center. Supports emerging Cambodian startups across Financial Services, Food & Agriculture, Education, and Travel & Hospitality through mentorship, workshops, and access to Plug and Play's global network of corporates and investors.",
+    description: "The third batch of Plug and Play Cambodia's accelerator program, run in partnership with the Ministry of Post and Telecommunications and the AUPP Technology Center.",
+    about: "Plug and Play is a global innovation platform (founded 2006) with a presence in 30+ locations worldwide, whose portfolio companies have collectively raised over $9 billion in funding. In Cambodia, the program supports emerging startups across Financial Services, Food & Agriculture, Education, Travel & Hospitality, and Logistics through mentorship, workshops, and access to Plug and Play's global network of corporates and investors. Since Batch 1 launched in September 2025, the program has helped Cambodian startups attract real investment — including Bamnang (a student-focused housing and mentorship superapp) and konektAgri (an agricultural credit and risk-assessment platform), both of which received direct investment from Plug and Play.",
     category: "Business",
     level: "Any Level",
     deadline: "2026-08-21",
     status: "Open",
     image: "assets/images/image_17.jpg",
     registerLink: "https://...",
-    featured: true
+    featured: true,
+    organizer: "Plug and Play Cambodia, with MPTC and AUPP Technology Center"
   },
   {
     id: 18,
     name: "SparkMeet Season 5 – Women Innovator Bootcamp",
-    description: "A 6-week in-person bootcamp under SparkMeet Season 5's Inclusive Program by Techo Startup Center, designed to support women in learning, growing, and exploring meaningful ideas through guided sessions, expert speakers, and team-based activities. Limited participants selected.",
+    description: "A 6-week in-person bootcamp under SparkMeet Season 5's Inclusive Program by Techo Startup Center, designed to support women in learning, growing, and exploring meaningful ideas.",
+    about: "SparkMeet is an ongoing program series run by Techo Startup Center — this Women Innovator Bootcamp is part of Season 5's Inclusive Program track. Over 6 weeks of in-person sessions, participants take part in guided training, hear from expert speakers, and work through team-based activities together. Only a limited number of participants are selected.",
     category: "Business",
     level: "Any Level",
     deadline: "2026-05-03",
     status: "Closed",
     image: "assets/images/image_18.jpg",
     registerLink: "https://...",
-    featured: true
+    featured: true,
+    organizer: "Techo Startup Center"
   }
 ];

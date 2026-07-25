@@ -55,7 +55,7 @@ function renderCompetitionDetail(competition) {
   const organizer = competition.organizer || "Organizer not listed";
   const location = competition.location || "To be announced";
   const teamSize = competition.teamSize || "Not specified";
-  const price = competition.price || "Free";
+  const price = competition.price || "To be announced";
   const about = competition.about || competition.description; // use "about" if provided, else fall back to short description
 
   // set the browser tab title
