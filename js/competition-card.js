@@ -1,5 +1,10 @@
 // builds the HTML string for one competition card
 function createCompetitionCard(competition) {
+  // green badge for "Open", red badge for "Closed" (or anything else)
+  const statusBadgeClass = competition.status === "Open"
+    ? "bg-success bg-opacity-25 text-success"
+    : "bg-danger bg-opacity-25 text-danger";
+
   return `
     <div class="col-12 col-md-6 col-lg-4">
       <div class="card event-card h-100">
@@ -13,7 +18,7 @@ function createCompetitionCard(competition) {
           <div class="mb-3">
             <span class="badge bg-primary bg-opacity-25 text-primary-emphasis rounded-pill">${competition.category}</span>
             <span class="badge bg-primary bg-opacity-25 text-primary-emphasis rounded-pill">${competition.level}</span>
-            <span class="badge bg-success bg-opacity-25 text-success rounded-pill">${competition.status}</span>
+            <span class="badge ${statusBadgeClass} rounded-pill">${competition.status}</span>
           </div>
 
           <!-- competition name and short description -->

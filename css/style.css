@@ -40,6 +40,17 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+/* tablet & up: fixed-height, center-cropped card image so mixed
+   portrait/landscape posters don't create uneven card heights.
+   Mobile (below 768px) is untouched and keeps its natural sizing. */
+@media (min-width: 768px) {
+  .event-card .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 /* footer strip inside event card, bleeds to card edges */
 .event-card-footer {
   background-color: #172C4A;
