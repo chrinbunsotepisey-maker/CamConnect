@@ -1,3 +1,4 @@
+// grab all the DOM elements we need for search/filter/sort/pagination
 const searchInput = document.getElementById("searchInput");
 
 const levelFilters = document.querySelectorAll(".level-filter");
@@ -17,18 +18,18 @@ let currentPage = 1;
 
 // Read the checked boxes in a filter group (e.g. all checked levels)
 function getCheckedValues(filterGroup) {
-  return Array.from(filterGroup)
+  return Array.from(filterGroup) // NodeList -> array so we can use filter/map
     .filter(function (box) {
       return box.checked;
     })
     .map(function (box) {
-      return box.value;
+      return box.value; // just need the values, not the checkbox elements
     });
 }
 
 // Apply search + filters + sort, and return the resulting list
 function getFilteredCompetitions() {
-  let list = competitions.slice();
+  let list = competitions.slice(); // copy the array so we don't mutate the original data
 
   // Search by name or description
   const query = searchInput.value.trim().toLowerCase();
@@ -57,7 +58,7 @@ function getFilteredCompetitions() {
     });
   }
 
-  // Sort
+  // Sort — check which option is selected and sort accordingly
   if (sortSelect.value === "Deadline - Earliest") {
     list.sort(function (a, b) { return new Date(a.deadline) - new Date(b.deadline); });
   } else if (sortSelect.value === "Deadline - Latest") {
@@ -84,17 +85,20 @@ function renderPagination(totalPages) {
 
   let html = "";
 
+  // prev arrow, disabled when already on page 1
   html += `<button class="page-nav-btn" id="prevPageBtn" ${currentPage === 1 ? "disabled" : ""}>&lsaquo;</button>`;
 
+  // one numbered button per page, highlight the active page
   for (let i = 1; i <= totalPages; i++) {
     html += `<button class="page-btn ${i === currentPage ? "active" : ""}" data-page="${i}">${i}</button>`;
   }
 
+  // next arrow, disabled when already on the last page
   html += `<button class="page-nav-btn" id="nextPageBtn" ${currentPage === totalPages ? "disabled" : ""}>&rsaquo;</button>`;
 
   container.innerHTML = html;
 
-  // Page number buttons
+  // Page number buttons — clicking jumps straight to that page
   document.querySelectorAll(".page-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
       currentPage = Number(this.dataset.page);
@@ -130,15 +134,17 @@ function renderPage() {
   const filtered = getFilteredCompetitions();
   const totalPages = Math.max(1, Math.ceil(filtered.length / CARDS_PER_PAGE));
 
+  // safety check: if filtering shrank the list, don't stay stuck on a page that no longer exists
   if (currentPage > totalPages) {
     currentPage = totalPages;
   }
 
+  // slice out just the items for the current page
   const start = (currentPage - 1) * CARDS_PER_PAGE;
   const pageItems = filtered.slice(start, start + CARDS_PER_PAGE);
 
-  renderCompetitions(pageItems, "competitionContainer");
-  renderPagination(totalPages);
+  renderCompetitions(pageItems, "competitionContainer"); // draw the cards (from competition-card.js)
+  renderPagination(totalPages); // draw the page number buttons
 
   // Update "Showing X of Y results"
   if (resultCount) {
@@ -153,6 +159,7 @@ function handleFilterChange() {
   renderPage();
 }
 
+// wire up all the inputs to re-render whenever they change
 searchInput.addEventListener("input", handleFilterChange);
 
 levelFilters.forEach(function (box) {
@@ -165,7 +172,7 @@ categoryFilters.forEach(function (box) {
 
 sortSelect.addEventListener("change", handleFilterChange);
 
-// Clear all filters
+// Clear all filters — resets search, checkboxes, and sort back to default
 if (clearFiltersBtn) {
   clearFiltersBtn.addEventListener("click", function () {
 
@@ -188,5 +195,5 @@ if (clearFiltersBtn) {
   });
 }
 
-// Initial render
+// Initial render — runs once when the page first loads
 renderPage();
