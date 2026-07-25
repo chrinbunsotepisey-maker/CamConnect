@@ -1,147 +1,113 @@
+/* main wrapper for the competitions page */
 .competition-page{
     background:#070c1d;
     min-height:auto;
     padding-bottom:20px;
 }
 
+/* big page heading e.g. "Find Your Competition" */
 .competition-title{
     color:white;
     font-weight:700;
-    font-size:2.5rem;
+    font-size:40px;
 }
 
+/* highlighted word inside the title */
 .competition-title span{
     color:#3b82f6;
 }
 
+/* subtext under the title */
 .filter-text{
     color:#cfcfcf;
     margin-top:8px;
 }
 
+/* card container holding all filter controls */
 .filter-card{
-
     background:#111827;
-
     border:1px solid rgba(255,255,255,.08);
-
     border-radius:15px;
-
     padding:30px;
-
 }
 
+/* one row inside the filter card (label + options) */
 .filter-row{
-
     display:flex;
-
     align-items:center;
-
     gap:25px;
-
     margin-bottom:22px;
-
     flex-wrap:wrap;
-
 }
 
+/* label on the left of a filter row, e.g. "Category" */
 .filter-title{
-
     width:120px;
-
     color:#8ea4c9;
-
     font-weight:600;
-
     font-size:14px;
-
 }
 
+/* wrapper for the checkbox/radio options in a row */
 .filter-options{
-
     display:flex;
-
     flex-wrap:wrap;
-
     gap:22px;
-
 }
 
 .filter-options label{
-
     color:white;
-
     cursor:pointer;
-
     font-size:14px;
-
 }
 
+/* search input wrapper, needed for positioning the icon */
 .search-box{
-
     position:relative;
-
 }
 
+/* search icon placed inside the input */
 .search-box i{
-
     position:absolute;
-
     left:15px;
-
     top:50%;
-
     transform:translateY(-50%);
-
     color:#888;
-
 }
 
+/* the actual search text input */
 .search-box input{
-
     background:#111827;
-
     border:1px solid rgba(255,255,255,.1);
-
     color:white;
-
     padding-left:45px;
-
     height:48px;
-
     border-radius:10px;
-
 }
 
+/* search input style when focused/clicked */
 .search-box input:focus{
-
     background:#111827;
-
     color:white;
-
     box-shadow:none;
-
     border-color:#3b82f6;
-
 }
 
+/* Bootstrap dropdown (e.g. sort-by select) restyled dark */
 .form-select{
-
     width:240px;
-
     background:#111827;
-
     color:white;
-
     border:1px solid rgba(255,255,255,.1);
-
 }
 
+/* wrapper for sort dropdown, needed for the icon overlay */
 .sort-select-wrapper{
     position:relative;
     width:240px;
 }
 
+/* icon placed inside the sort dropdown */
 .sort-select-wrapper i{
     position:absolute;
     left:15px;
@@ -157,168 +123,121 @@
     padding-left:42px;
 }
 
+/* dropdown style when focused/clicked */
 .form-select:focus{
-
     box-shadow:none;
-
     border-color:#3b82f6;
-
 }
 
+/* tablet: stack filter row vertically, full-width controls */
 @media (max-width:991px){
+    .filter-row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-.filter-row{
+    .filter-title{
+        width:auto;
+    }
 
-    flex-direction:column;
+    .form-select{
+        width:100%;
+    }
 
-    align-items:flex-start;
-
+    .search-box{
+        margin-top:20px;
+    }
 }
 
-.filter-title{
-
-    width:auto;
-
-}
-
-.form-select{
-
-    width:100%;
-
-}
-
-.search-box{
-
-    margin-top:20px;
-
-}
-
-}
-
+/* mobile: smaller title, tighter card padding, stacked options */
 @media (max-width:576px){
+    .competition-title{
+        font-size:32px;
+    }
 
-.competition-title{
+    .filter-card{
+        padding:20px;
+    }
 
-    font-size:2rem;
+    .filter-options{
+        flex-direction:column;
+        gap:10px;
+    }
 
-}
+    .filter-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-.filter-card{
-
-    padding:20px;
-
-}
-
-.filter-options{
-
-    flex-direction:column;
-
-    gap:10px;
-
-}
-
-.filter-bottom{
-    flex-direction:column;
-    align-items:flex-start;
-}
-
-.sort-select-wrapper{
-    width:100%;
-}
-
+    .sort-select-wrapper{
+        width:100%;
+    }
 }
 
 /* Pagination */
+/* row of page number buttons, centered */
 .pagination-wrapper{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:10px;
-
     flex-wrap:wrap;
-
 }
 
+/* individual page number button / prev-next arrow button */
 .page-btn,
 .page-nav-btn{
-
     min-width:42px;
-
     height:42px;
-
     border-radius:10px;
-
     background:#111827;
-
     border:1px solid rgba(255,255,255,.1);
-
     color:#cfcfcf;
-
     font-weight:600;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     cursor:pointer;
-
     transition:0.2s;
-
 }
 
+/* hover state for page buttons (not disabled ones) */
 .page-btn:hover,
 .page-nav-btn:hover:not(:disabled){
-
     border-color:#3b82f6;
-
     color:#fff;
-
 }
 
+/* currently selected page number */
 .page-btn.active{
-
     background:#3b82f6;
-
     border-color:#3b82f6;
-
     color:#fff;
-
 }
 
+/* greyed-out state for prev/next when at the start/end */
 .page-nav-btn:disabled{
-
     opacity:0.35;
-
     cursor:not-allowed;
-
 }
 
+/* mobile: shrink pagination buttons */
 @media (max-width:576px){
-
-.page-btn,
-.page-nav-btn{
-
-    min-width:36px;
-
-    height:36px;
-
-    font-size:0.85rem;
-
+    .page-btn,
+    .page-nav-btn{
+        min-width:36px;
+        height:36px;
+        font-size:14px;
+    }
 }
 
-}
-
+/* horizontal line separating filters from results */
 .filter-divider{
     border-color:rgba(255,255,255,.08);
     margin:24px 0 18px;
 }
 
+/* row holding "Clear filters" button + result count */
 .filter-bottom{
     display:flex;
     justify-content:space-between;
@@ -327,6 +246,7 @@
     gap:15px;
 }
 
+/* "Clear all filters" button */
 .clear-btn{
     border-radius:10px;
     padding:10px 18px;
@@ -337,6 +257,7 @@
     margin-right:6px;
 }
 
+/* "Showing X results" text */
 .result-count{
     color:#b8c3d6;
     font-size:14px;

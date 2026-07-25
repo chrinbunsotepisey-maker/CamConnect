@@ -1,32 +1,38 @@
+/* base page styles: font, dark background, white text */
 body{
   font-family:'Outfit',sans-serif;
   background:#070b14;
   color:#fff;
 }
 
+/* spacing above/below the about page hero section */
 .about-hero{
   padding:90px 0 70px;
 }
 
+/* caps hero text width so it doesn't stretch too wide */
 .hero-text{
   max-width:700px;
 }
 
+/* small blue label text above section headings */
 .section-eyebrow{
   color:#6ea8fe;
-  font-size:0.85rem;
+  font-size:14px;
   font-weight:700;
   letter-spacing:0.12em;
-  margin-bottom:0.75rem;
+  margin-bottom:12px;
 }
 
+/* dark card container used on the about page */
 .about-card{
   background:#111827;
   border:1px solid #1f2937;
   border-radius:24px;
-  padding:2.5rem;
+  padding:40px;
 }
 
+/* card for each value/feature, lifts up on hover */
 .value-card{
   background:#111827;
   border:1px solid #1f2937;
@@ -35,28 +41,33 @@ body{
   transition:transform .2s ease, border-color .2s ease;
 }
 
+/* hover effect: card rises and border turns blue */
 .value-card:hover{
   transform:translateY(-4px);
   border-color:#2563eb;
 }
 
+/* image on top of value card, cropped to fill space */
 .value-image{
   width:100%;
   height:180px;
   object-fit:cover;
 }
 
+/* text/content padding inside value card */
 .value-body{
-  padding:1.25rem;
+  padding:20px;
 }
 
+/* card used in "how it works" steps */
 .step-card{
   background:#111827;
   border:1px solid #1f2937;
   border-radius:20px;
-  padding:2rem;
+  padding:32px;
 }
 
+/* numbered circle/box (1, 2, 3...) inside step card */
 .step-number{
   width:52px;
   height:52px;
@@ -69,13 +80,14 @@ body{
   font-weight:700;
 }
 
+/* mobile: tighten up spacing/sizes on small screens */
 @media (max-width: 767px){
   .about-hero{
     padding:70px 0 50px;
   }
 
   .about-card{
-    padding:1.5rem;
+    padding:24px;
   }
 
   .value-image{
@@ -83,6 +95,6 @@ body{
   }
 
   .step-card{
-    padding:1.5rem;
+    padding:24px;
   }
 }

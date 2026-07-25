@@ -1,17 +1,16 @@
-/* ============================================
-   Event Detail Page — styled to match
-   style.css / competition.css color scheme
-   ============================================ */
-
+/* full-page dark background for the detail page */
 .detail-page {
+  /* normal property: sets background directly */
   background: #070c1d;
   min-height: 100vh;
 }
 
-/* Breadcrumb */
+/* Breadcrumb nav (Home > Competitions > Event) */
 .detail-breadcrumb {
+
+  /* custom property: defines a reusable value named --bs-breadcrumb-divider-color */
   --bs-breadcrumb-divider-color: #4a5a7a;
-  font-size: 0.9rem;
+  font-size: 14px;
 }
 .detail-breadcrumb a {
   color: #8ea4c9;
@@ -24,16 +23,17 @@
   color: #F5F7FF;
 }
 
-/* Hero image */
+/* Hero image container at top of detail page */
 .detail-hero {
   position: relative;
-  border-radius: 1rem;
+  border-radius: 16px;
   overflow: hidden;
   height: 320px;
   background: #0D1425;
   border: 1px solid #1E2D45;
 }
 
+/* makes the hero image fill its container, cropped */
 .detail-hero img {
   width: 100%;
   height: 100%;
@@ -41,41 +41,45 @@
   display: block;
 }
 
+/* dark gradient over hero image for text readability */
 .detail-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, transparent 45%, rgba(6, 9, 24, 0.85) 100%);
 }
 
+/* pill badge showing open/closed status */
 .detail-status-badge {
   display: inline-flex;
   align-items: center;
-  font-size: 0.72rem;
+  font-size: 12px;
   font-weight: 700;
   padding: 5px 14px;
   border-radius: 100px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
 }
 
+/* green style for "open" status */
 .detail-status-badge.status-open {
   background: rgba(16, 185, 129, 0.2);
   color: #34D399;
   border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
+/* red style for "closed" status */
 .detail-status-badge.status-closed {
   background: rgba(244, 63, 94, 0.15);
   color: #F87171;
   border: 1px solid rgba(244, 63, 94, 0.3);
 }
 
-/* Category / level badges */
+/* blue pill badge for competition category */
 .detail-cat-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.78rem;
+  font-size: 12px;
   font-weight: 700;
   padding: 5px 12px;
   border-radius: 100px;
@@ -83,8 +87,9 @@
   color: #93C5FD;
 }
 
+/* small square badge for difficulty level */
 .detail-level-badge {
-  font-size: 0.72rem;
+  font-size: 12px;
   font-weight: 700;
   padding: 5px 11px;
   border-radius: 6px;
@@ -93,44 +98,49 @@
   border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
+/* main event title styling */
 .detail-title {
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.4px;
 }
 
+/* organizer name under the title */
 .detail-organizer {
   color: #8ea4c9;
-  font-size: 0.95rem;
+  font-size: 15px;
 }
 
-/* About card */
+/* card holding the "About" description */
 .detail-about-card {
   background: #0D1425;
   border: 1px solid #1E2D45;
-  border-radius: 1rem;
-  padding: 1.75rem;
+  border-radius: 16px;
+  padding: 28px;
 }
 
+/* heading inside the about card, with underline */
 .detail-about-card h5 {
   border-bottom: 1px solid #1E2D45;
-  padding-bottom: 0.75rem;
-  margin-bottom: 1rem;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
   font-weight: 700;
 }
 
+/* body paragraph text in the about card */
 .detail-about-text {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.75;
   white-space: pre-line;
 }
 
+/* "back to competitions" link/button */
 .detail-back-link {
   color: #8ea4c9;
   text-decoration: none;
   border: 1px solid #1E2D45;
   border-radius: 8px;
   padding: 8px 16px;
-  font-size: 0.9rem;
+  font-size: 14px;
   display: inline-block;
 }
 
@@ -139,16 +149,18 @@
   border-color: #3C85F2;
 }
 
-/* Sidebar */
+/* Sidebar CTA card */
+/* highlighted "register now" box in the sidebar */
 .sidebar-cta {
   background: #0D1425;
   border: 1px solid rgba(59, 130, 246, 0.35);
-  border-radius: 1rem;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 24px;
   position: relative;
   overflow: hidden;
 }
 
+/* thin blue gradient bar along the top edge of the CTA */
 .sidebar-cta::before {
   content: "";
   position: absolute;
@@ -159,66 +171,74 @@
   background: linear-gradient(90deg, #3B82F6, #60A5FA);
 }
 
+/* small uppercase "deadline" label */
 .cta-deadline-label {
-  font-size: 0.72rem;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.4);
   margin-bottom: 4px;
 }
 
+/* large red deadline date text */
 .cta-deadline-value {
-  font-size: 1.4rem;
+  font-size: 22px;
   font-weight: 700;
   color: #F87171;
   margin-bottom: 6px;
 }
 
+/* "X days left" text under the deadline */
 .cta-days-left {
-  font-size: 0.85rem;
+  font-size: 14px;
   color: #8ea4c9;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
 }
 
+/* small note text at bottom of CTA card */
 .cta-note {
-  font-size: 0.78rem;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.4);
-  margin-top: 0.75rem;
+  margin-top: 12px;
   margin-bottom: 0;
   text-align: center;
 }
 
-/* Details list */
+/* Details list card (prize, team size, etc.) */
 .details-card {
   background: #0D1425;
   border: 1px solid #1E2D45;
-  border-radius: 1rem;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 24px;
 }
 
 .details-card h6 {
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   color: #F5F7FF;
 }
 
+/* one row in the details list (label + value) */
 .detail-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6rem 0;
+  padding: 10px 0;
   border-bottom: 1px solid #1E2D45;
-  font-size: 0.9rem;
+  font-size: 14px;
 }
 
+/* removes divider line after the last row */
 .detail-row:last-child {
   border-bottom: none;
 }
 
+/* label text on the left side of a row */
 .detail-key {
   color: #8ea4c9;
 }
 
+/* value text on the right side of a row */
 .detail-val {
   color: #F5F7FF;
   font-weight: 600;
@@ -233,22 +253,23 @@
   color: #34D399;
 }
 
-/* Other events section */
+/* "Other Events" section label */
 .related-label {
   color: #5094FA;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
 
-/* Responsive tweaks */
+/* tablet: shrink hero image height */
 @media (max-width: 991.98px) {
   .detail-hero {
     height: 240px;
   }
 }
 
+/* mobile: shrink hero image and card padding further */
 @media (max-width: 575.98px) {
   .detail-hero {
     height: 200px;
@@ -257,6 +278,6 @@
   .detail-about-card,
   .details-card,
   .sidebar-cta {
-    padding: 1.25rem;
+    padding: 20px;
   }
 }
