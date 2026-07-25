@@ -8,7 +8,7 @@ const competitions = [
     deadline: "2026-08-14",
     status: "Open",
     image: "assets/images/image_1.jpg",
-    registerLink: "https://...",
+    registerLink: "https://l.facebook.com/l.php?u=https%3A%2F%2Fforms.gle%2FGkm3LWPwo7nY6w198&h=AUCqRfD4xczrpa4WtwoPjaTnUyZqCId3o9uS4VyfEV03pnHOtyzVe2t8OhUld2RuBzHluOlLp-FzYIbspiHwgLjQAmdHtnMTtdydQv_POKkQj1yF4JhHwxUDsawZS1kooEdjbY9pKxPNm07XsUduBzfS5NF66wfo&__tn__=-UK-R&c[0]=AUDcuJTR5KFZ9adrwZcxcc_yn_KUlobSAiAEd7POZtHRKIySOErzXgjdBqYuTm-_ZqPWP6ZV_3rR99WC2JKRvBrWt76heaASnXkQS3mcdwoQXPs3NzYuzSnztTlZV8WS-ImO8X04ZJxgRSoNqg8BpIoJa2h538USGJ-yo9LV4Cff33_AKExF6W7JYj7BAeQ",
     featured: true
   },
   {
@@ -20,7 +20,7 @@ const competitions = [
     deadline: "2026-08-22",
     status: "Open",
     image: "assets/images/image_2.jpg",
-    registerLink: "https://...",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdxtEkbmE28vwA3wiqMniDRXewbpDYsijtECDsrjf1OsPPOfw/viewform?pli=1",
     featured: true
   },
   {
@@ -32,7 +32,7 @@ const competitions = [
     deadline: "2026-07-15",
     status: "Closed",
     image: "assets/images/image_3.jpg",
-    registerLink: "https://...",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfhT11sbnK0oVMsc2nGXohVh5wvu_bSExd9jvylFRxXDkG33w/viewform",
     featured: true,
     organizer: "Khmer Enterprise (KE)"
   },
@@ -45,7 +45,7 @@ const competitions = [
     deadline: "2026-07-25",
     status: "Closed",
     image: "assets/images/image_4.jpg",
-    registerLink: "https://...",
+    registerLink: "https://luma.com/10hlz4eh",
     featured: true,
     organizer: "Tech for Kids Academy"
   },
@@ -82,7 +82,7 @@ const competitions = [
     deadline: "2026-09-25",
     status: "Open",
     image: "assets/images/image_7.jpg",
-    registerLink: "https://...",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSc8j2IBXZ9NadMBP2Bzv4NqwVyIOZYF7NM250Zs1ml2FNoR1w/viewform",
     featured: true
   },
   {
@@ -94,20 +94,20 @@ const competitions = [
     deadline: "2026-07-25",
     status: "Closed",
     image: "assets/images/image_8.jpg",
-    registerLink: "https://...",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSf8dOnjGTKGFYBk_R8PvyHO4RsRoUwqQaJ4p0txguRHb5u4lg/viewform",
     featured: false,
     organizer: "Khmer Enterprise (KE)"
   },
   {
     id: 9,
-    name: "Bridging the Cold Chain Gap Challenge",
+    name: "ADB's Bridging the Cold Chain Gap Challenge",
     description: "A technology innovation challenge by ADB and the High-Level Technology Fund seeking affordable cold chain solutions to reduce post-harvest food loss for last-mile fruit and vegetable vendors in India.",
     category: "Tech",
     level: "Any Level",
     deadline: "2026-09-04",
     status: "Open",
     image: "assets/images/image_9.jpg",
-    registerLink: "https://...",
+    registerLink: "https://challenges.adb.org/en/challenges/tic-coldchain",
     featured: true,
     organizer: "Asian Development Bank (ADB) / High-Level Technology Fund",
     location: "India"
@@ -121,7 +121,7 @@ const competitions = [
     deadline: "2026-06-14",
     status: "Closed",
     image: "assets/images/image_10.jpg",
-    registerLink: "https://...",
+    registerLink: "https://hackathon.techostartup.center/",
     featured: true,
     location: "Siem Reap"
   },
@@ -150,7 +150,7 @@ const competitions = [
     deadline: "2026-07-25",
     status: "Closed",
     image: "assets/images/image_12.jpg",
-    registerLink: "https://...",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeq90lLaRcv20XAKW9f0xal88YnYpde9k43u_VqnzB9-PoORg/closedform",
     featured: false,
     organizer: "D4D Hub and DICHI Academy"
   },
@@ -164,7 +164,7 @@ const competitions = [
     deadline: "2026-07-17",
     status: "Closed",
     image: "assets/images/image_13.jpg",
-    registerLink: "https://...",
+    registerLink: "https://form.gov.kh/69eee0124930df0013664a71",
     featured: false,
     organizer: "Ministry of Post and Telecommunications (MPTC)",
     teamSize: "Individual"
@@ -179,7 +179,7 @@ const competitions = [
     deadline: "2026-07-25",
     status: "Closed",
     image: "assets/images/image_14.jpg",
-    registerLink: "https://...",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScJYLRy4RE6yWJCndZahCOtmPGXygAAy7YNhCo3t88D-VNnag/viewform",
     featured: false,
     organizer: "Wonders, ChorogUsan for Children, and Phum Impact (funded by KOICA)",
     location: "Battambang"
@@ -194,7 +194,7 @@ const competitions = [
     deadline: "2026-08-23",
     status: "Open",
     image: "assets/images/image_15.jpg",
-    registerLink: "https://...",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSd7vOHgBH4OYuXqYinCXkMjxhFvkARawwGE0OS_utxdx8Tdzg/viewform",
     featured: true,
     organizer: "Techo Startup Center (UNIDO / GEF-backed)"
   },
@@ -207,14 +207,14 @@ const competitions = [
     deadline: "2026-08-14",
     status: "Open",
     image: "assets/images/image_16.jpg",
-    registerLink: "https://...",
+    registerLink: "https://www.ccacoalition.org/calls-for-proposals/2026-calls-proposals-super-pollutant-country-action-accelerator/cambodia-accelerating-actions-improve-organic-waste-management",
     featured: true,
     organizer: "Climate & Clean Air Coalition, with Cambodia's Ministry of Environment",
     location: "Phnom Penh, Siem Reap, Kampong Chhnang, and Koh Sralao Island (Koh Kong) — pilot locations"
   },
   {
     id: 17,
-    name: "Innovate Cambodia Accelerator Program – Batch 3",
+    name: "Innovate Cambodia Accelerator Program - Batch 3",
     description: "The third batch of Plug and Play Cambodia's accelerator program, run in partnership with the Ministry of Post and Telecommunications and the AUPP Technology Center.",
     about: "Plug and Play is a global innovation platform (founded 2006) with a presence in 30+ locations worldwide, whose portfolio companies have collectively raised over $9 billion in funding. In Cambodia, the program supports emerging startups across Financial Services, Food & Agriculture, Education, Travel & Hospitality, and Logistics through mentorship, workshops, and access to Plug and Play's global network of corporates and investors. Since Batch 1 launched in September 2025, the program has helped Cambodian startups attract real investment — including Bamnang (a student-focused housing and mentorship superapp) and konektAgri (an agricultural credit and risk-assessment platform), both of which received direct investment from Plug and Play.",
     category: "Business",
@@ -222,7 +222,7 @@ const competitions = [
     deadline: "2026-08-21",
     status: "Open",
     image: "assets/images/image_17.jpg",
-    registerLink: "https://...",
+    registerLink: "https://www.plugandplayapac.com/cambodia-program",
     featured: true,
     organizer: "Plug and Play Cambodia, with MPTC and AUPP Technology Center"
   },
@@ -236,7 +236,7 @@ const competitions = [
     deadline: "2026-05-03",
     status: "Closed",
     image: "assets/images/image_18.jpg",
-    registerLink: "https://...",
+    registerLink: "https://airtable.com/login?continue=%2FappyQ1EVuiLOHDKEm%2FpagUoOCii6OPMWPZd%2Fform",
     featured: true,
     organizer: "Techo Startup Center"
   }
