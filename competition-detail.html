@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Existing project styles -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/header.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
+  <link href="css/scrollTop.css" rel="stylesheet">
+
+  <!-- New competition detail page style -->
+  <link href="css/competition-detail.css" rel="stylesheet">
+
+  <title>CamConnect - Competition Details</title>
+</head>
+<body>
+
+  <!-- Header (already in your project) -->
+  <div id="header"></div>
+
+  <section class="detail-page py-4">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb detail-breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="competition.html">Competitions</a></li>
+          <li class="breadcrumb-item active" id="breadcrumbName" aria-current="page">Competition</li>
+        </ol>
+      </nav>
+
+      <div class="row g-4">
+
+        <!-- Left column -->
+        <div class="col-lg-8">
+
+          <!-- Hero image -->
+          <div class="detail-hero mb-4">
+            <img id="competitionImage" src="https://placehold.co/1200x600" alt="Competition cover">
+            <div class="detail-hero-overlay"></div>
+          </div>
+
+          <!-- Badges + title -->
+          <div class="mb-4">
+            <div class="d-flex align-items-center gap-2 mb-3 flex-wrap">
+              <span class="detail-cat-badge" id="competitionCategory">Category</span>
+              <span class="detail-level-badge" id="competitionLevel">Level</span>
+              <span class="detail-status-badge" id="competitionStatusBadge">Open</span>
+            </div>
+            <h1 class="detail-title h2 mb-2" id="competitionName">Competition Name</h1>
+            <p class="detail-organizer mb-0">Organized by <strong id="competitionOrganizer" class="text-white">Organizer</strong></p>
+          </div>
+
+          <!-- About -->
+          <div class="detail-about-card mb-4">
+            <h5>About this competition</h5>
+            <p class="detail-about-text" id="competitionAbout">Description goes here.</p>
+          </div>
+
+          <a href="competition.html" class="detail-back-link">&larr; Back to Competitions</a>
+
+        </div>
+
+        <!-- Right column / sidebar -->
+        <div class="col-lg-4">
+
+          <div class="sidebar-cta mb-4">
+            <div class="cta-deadline-label">Application deadline</div>
+            <div class="cta-deadline-value" id="competitionDeadline">-</div>
+            <div class="cta-days-left" id="competitionDaysLeft">-</div>
+            <a href="#" id="competitionRegisterBtn" target="_blank" class="btn btn-primary w-100 rounded-pill fw-semibold">
+              Register at official site
+            </a>
+            <p class="cta-note">You will be taken to the organizer's official registration page.</p>
+          </div>
+
+          <div class="details-card">
+            <h6>Competition details</h6>
+
+            <div class="detail-row">
+              <span class="detail-key">Deadline</span>
+              <span class="detail-val pink" id="detailDeadline">-</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Organizer</span>
+              <span class="detail-val" id="detailOrganizer">-</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Location</span>
+              <span class="detail-val" id="detailLocation">-</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Team size</span>
+              <span class="detail-val" id="detailTeamSize">-</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Level</span>
+              <span class="detail-val" id="detailLevel">-</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-key">Price</span>
+              <span class="detail-val green" id="detailPrice">-</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Other Competitions -->
+  <section class="py-5">
+    <div class="container">
+      <p class="related-label mb-1">More to explore</p>
+      <h2 class="fw-bold h3 mb-4">Other Events</h2>
+
+      <div class="row g-4" id="otherCompetitions"></div>
+    </div>
+  </section>
+
+  <!-- Footer (already in your project) -->
+  <div id="footer"></div>
+
+  <!-- Scroll Top Button -->
+  <div id="scrollTopSlot"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Existing JS -->
+  <script src="js/header.js"></script>
+  <script src="js/competitions-data.js"></script>
+  <script src="js/competition-card.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/scrollTop.js"></script>
+
+  <!-- New competition detail page JS -->
+  <script src="js/competition-detail.js"></script>
+</body>
+</html>

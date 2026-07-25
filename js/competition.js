@@ -6,43 +6,187 @@ const categoryFilters = document.querySelectorAll(".category-filter");
 
 const sortSelect = document.getElementById("sortSelect");
 
-searchInput.addEventListener("input", function(){
+const clearFiltersBtn = document.getElementById("clearFilters");
 
-    console.log("Searching:", this.value);
+const resultCount = document.getElementById("resultCount");
 
+// How many cards show per page, and which page we're currently on
+const CARDS_PER_PAGE = 9;
+let currentPage = 1;
+
+
+// Read the checked boxes in a filter group (e.g. all checked levels)
+function getCheckedValues(filterGroup) {
+  return Array.from(filterGroup)
+    .filter(function (box) {
+      return box.checked;
+    })
+    .map(function (box) {
+      return box.value;
+    });
+}
+
+// Apply search + filters + sort, and return the resulting list
+function getFilteredCompetitions() {
+  let list = competitions.slice();
+
+  // Search by name or description
+  const query = searchInput.value.trim().toLowerCase();
+  if (query) {
+    list = list.filter(function (item) {
+      return (
+        item.name.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query)
+      );
+    });
+  }
+
+  // Level filter (skip filtering if none checked, or "All" is checked)
+  const checkedLevels = getCheckedValues(levelFilters);
+  if (checkedLevels.length && !checkedLevels.includes("All")) {
+    list = list.filter(function (item) {
+      return checkedLevels.includes(item.level);
+    });
+  }
+
+  // Category filter (same logic as level)
+  const checkedCategories = getCheckedValues(categoryFilters);
+  if (checkedCategories.length && !checkedCategories.includes("All")) {
+    list = list.filter(function (item) {
+      return checkedCategories.includes(item.category);
+    });
+  }
+
+  // Sort
+  if (sortSelect.value === "Deadline - Earliest") {
+    list.sort(function (a, b) { return new Date(a.deadline) - new Date(b.deadline); });
+  } else if (sortSelect.value === "Deadline - Latest") {
+    list.sort(function (a, b) { return new Date(b.deadline) - new Date(a.deadline); });
+  } else if (sortSelect.value === "Name A-Z") {
+    list.sort(function (a, b) { return a.name.localeCompare(b.name); });
+  } else if (sortSelect.value === "Name Z-A") {
+    list.sort(function (a, b) { return b.name.localeCompare(a.name); });
+  }
+
+  return list;
+}
+
+// Draw the page number buttons under the cards
+function renderPagination(totalPages) {
+  const container = document.getElementById("paginationControls");
+  if (!container) return;
+
+  // No pagination needed if everything fits on one page
+  if (totalPages <= 1) {
+    container.innerHTML = "";
+    return;
+  }
+
+  let html = "";
+
+  html += `<button class="page-nav-btn" id="prevPageBtn" ${currentPage === 1 ? "disabled" : ""}>&lsaquo;</button>`;
+
+  for (let i = 1; i <= totalPages; i++) {
+    html += `<button class="page-btn ${i === currentPage ? "active" : ""}" data-page="${i}">${i}</button>`;
+  }
+
+  html += `<button class="page-nav-btn" id="nextPageBtn" ${currentPage === totalPages ? "disabled" : ""}>&rsaquo;</button>`;
+
+  container.innerHTML = html;
+
+  // Page number buttons
+  document.querySelectorAll(".page-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      currentPage = Number(this.dataset.page);
+      renderPage();
+    });
+  });
+
+  // Prev / Next buttons
+  const prevBtn = document.getElementById("prevPageBtn");
+  const nextBtn = document.getElementById("nextPageBtn");
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", function () {
+      if (currentPage > 1) {
+        currentPage--;
+        renderPage();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", function () {
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderPage();
+      }
+    });
+  }
+}
+
+// Filter + sort + slice to the current page, then render cards + pagination
+function renderPage() {
+  const filtered = getFilteredCompetitions();
+  const totalPages = Math.max(1, Math.ceil(filtered.length / CARDS_PER_PAGE));
+
+  if (currentPage > totalPages) {
+    currentPage = totalPages;
+  }
+
+  const start = (currentPage - 1) * CARDS_PER_PAGE;
+  const pageItems = filtered.slice(start, start + CARDS_PER_PAGE);
+
+  renderCompetitions(pageItems, "competitionContainer");
+  renderPagination(totalPages);
+
+  // Update "Showing X of Y results"
+  if (resultCount) {
+    resultCount.textContent =
+      `Showing ${filtered.length} of ${competitions.length} results`;
+  }
+}
+
+// Any time search, filters, or sort changes, go back to page 1 and re-render
+function handleFilterChange() {
+  currentPage = 1;
+  renderPage();
+}
+
+searchInput.addEventListener("input", handleFilterChange);
+
+levelFilters.forEach(function (box) {
+  box.addEventListener("change", handleFilterChange);
 });
 
-levelFilters.forEach(box=>{
+categoryFilters.forEach(function (box) {
+  box.addEventListener("change", handleFilterChange);
+});
 
-    box.addEventListener("change",function(){
+sortSelect.addEventListener("change", handleFilterChange);
 
-        console.log("Level:",this.value);
+// Clear all filters
+if (clearFiltersBtn) {
+  clearFiltersBtn.addEventListener("click", function () {
 
+    searchInput.value = "";
+
+    levelFilters.forEach(function (box) {
+      box.checked = false;
     });
 
-});
-
-categoryFilters.forEach(box=>{
-
-    box.addEventListener("change",function(){
-
-        console.log("Category:",this.value);
-
+    categoryFilters.forEach(function (box) {
+      box.checked = false;
     });
 
-});
+    sortSelect.value = "Deadline - Earliest";
 
-sortSelect.addEventListener("change",function(){
+    currentPage = 1;
 
-    console.log("Sort:",this.value);
+    renderPage();
 
-});
+  });
+}
 
-
-
-// Card Data
-
-renderEvents(
-    events,
-    "competitionContainer"
-);
+// Initial render
+renderPage();

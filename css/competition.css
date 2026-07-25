@@ -1,6 +1,7 @@
 .competition-page{
     background:#070c1d;
-    min-height:100vh;
+    min-height:auto;
+    padding-bottom:20px;
 }
 
 .competition-title{
@@ -136,6 +137,26 @@
 
 }
 
+.sort-select-wrapper{
+    position:relative;
+    width:240px;
+}
+
+.sort-select-wrapper i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#8ea4c9;
+    pointer-events:none;
+    z-index:2;
+}
+
+.sort-select-wrapper .form-select{
+    width:100%;
+    padding-left:42px;
+}
+
 .form-select:focus{
 
     box-shadow:none;
@@ -196,4 +217,128 @@
 
 }
 
+.filter-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.sort-select-wrapper{
+    width:100%;
+}
+
+}
+
+/* Pagination */
+.pagination-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.page-btn,
+.page-nav-btn{
+
+    min-width:42px;
+
+    height:42px;
+
+    border-radius:10px;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:#cfcfcf;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:0.2s;
+
+}
+
+.page-btn:hover,
+.page-nav-btn:hover:not(:disabled){
+
+    border-color:#3b82f6;
+
+    color:#fff;
+
+}
+
+.page-btn.active{
+
+    background:#3b82f6;
+
+    border-color:#3b82f6;
+
+    color:#fff;
+
+}
+
+.page-nav-btn:disabled{
+
+    opacity:0.35;
+
+    cursor:not-allowed;
+
+}
+
+@media (max-width:576px){
+
+.page-btn,
+.page-nav-btn{
+
+    min-width:36px;
+
+    height:36px;
+
+    font-size:0.85rem;
+
+}
+
+}
+
+.filter-divider{
+    border-color:rgba(255,255,255,.08);
+    margin:24px 0 18px;
+}
+
+.filter-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.clear-btn{
+    border-radius:10px;
+    padding:10px 18px;
+    font-weight:600;
+}
+
+.clear-btn i{
+    margin-right:6px;
+}
+
+.result-count{
+    color:#b8c3d6;
+    font-size:14px;
+    font-weight:500;
 }

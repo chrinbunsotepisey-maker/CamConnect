@@ -1,1 +1,0 @@
-renderEvents(events, "featuredEvents");

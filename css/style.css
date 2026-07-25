@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+
 body {
   background-color: #060918;
   color: #F5F7FF;
@@ -24,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* font for the competition's date in each card */
 .event-date {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'DM Mono', monospace;
 }
 
 .event-card {

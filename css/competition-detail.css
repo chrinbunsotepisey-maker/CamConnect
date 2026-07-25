@@ -1,0 +1,262 @@
+/* ============================================
+   Event Detail Page — styled to match
+   style.css / competition.css color scheme
+   ============================================ */
+
+.detail-page {
+  background: #070c1d;
+  min-height: 100vh;
+}
+
+/* Breadcrumb */
+.detail-breadcrumb {
+  --bs-breadcrumb-divider-color: #4a5a7a;
+  font-size: 0.9rem;
+}
+.detail-breadcrumb a {
+  color: #8ea4c9;
+  text-decoration: none;
+}
+.detail-breadcrumb a:hover {
+  color: #5094FA;
+}
+.detail-breadcrumb .active {
+  color: #F5F7FF;
+}
+
+/* Hero image */
+.detail-hero {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 320px;
+  background: #0D1425;
+  border: 1px solid #1E2D45;
+}
+
+.detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 45%, rgba(6, 9, 24, 0.85) 100%);
+}
+
+.detail-status-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.detail-status-badge.status-open {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.detail-status-badge.status-closed {
+  background: rgba(244, 63, 94, 0.15);
+  color: #F87171;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+/* Category / level badges */
+.detail-cat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: rgba(59, 130, 246, 0.15);
+  color: #93C5FD;
+}
+
+.detail-level-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 11px;
+  border-radius: 6px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #93C5FD;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.detail-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.detail-organizer {
+  color: #8ea4c9;
+  font-size: 0.95rem;
+}
+
+/* About card */
+.detail-about-card {
+  background: #0D1425;
+  border: 1px solid #1E2D45;
+  border-radius: 1rem;
+  padding: 1.75rem;
+}
+
+.detail-about-card h5 {
+  border-bottom: 1px solid #1E2D45;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.detail-about-text {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+.detail-back-link {
+  color: #8ea4c9;
+  text-decoration: none;
+  border: 1px solid #1E2D45;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.detail-back-link:hover {
+  color: #F5F7FF;
+  border-color: #3C85F2;
+}
+
+/* Sidebar */
+.sidebar-cta {
+  background: #0D1425;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3B82F6, #60A5FA);
+}
+
+.cta-deadline-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 4px;
+}
+
+.cta-deadline-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #F87171;
+  margin-bottom: 6px;
+}
+
+.cta-days-left {
+  font-size: 0.85rem;
+  color: #8ea4c9;
+  margin-bottom: 1.25rem;
+}
+
+.cta-note {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* Details list */
+.details-card {
+  background: #0D1425;
+  border: 1px solid #1E2D45;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.details-card h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #F5F7FF;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #1E2D45;
+  font-size: 0.9rem;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-key {
+  color: #8ea4c9;
+}
+
+.detail-val {
+  color: #F5F7FF;
+  font-weight: 600;
+  text-align: right;
+}
+
+.detail-val.pink {
+  color: #F87171;
+}
+
+.detail-val.green {
+  color: #34D399;
+}
+
+/* Other events section */
+.related-label {
+  color: #5094FA;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+  .detail-hero {
+    height: 240px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .detail-hero {
+    height: 200px;
+  }
+
+  .detail-about-card,
+  .details-card,
+  .sidebar-cta {
+    padding: 1.25rem;
+  }
+}
