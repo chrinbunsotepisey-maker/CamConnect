@@ -49,15 +49,15 @@ const competitions = [
   },
   {
     id: 5,
-    name: "Turing Hackathon Cycle 10",
-    description: "48-hour hackathon tackling real-world challenges.",
+    name: "Reverse Innovation Cohort 6",
+    description: "A 3-month accelerator program for startups to develop tech-based solutions to real market challenges presented by industry Challenge Owners, with mentorship from domain experts.",
     category: "Tech",
-    level: "Any Level",
-    deadline: "2026-09-14",
-    status: "Open",
-    image: "https://placehold.co/600x350",
-    registerLink: "https://...",
-    featured: false
+    level: "University",
+    deadline: "2026-07-23",
+    status: "Closed",
+    image: "assets/images/image 5.png",
+    registerLink: "https://airtable.com/appz0Cfn1uXVH.../pagMFJrW9MjkttSBQ/form",
+    featured: true
   },
   {
     id: 6,
